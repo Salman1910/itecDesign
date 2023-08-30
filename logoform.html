@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- Site Metas -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-  
+    <meta name="keywords" content />
+    <meta name="description" content />
+    <meta name="author" content />
+
     <title>Logo Form</title>
-  
+
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <!-- progress barstle -->
     <link rel="stylesheet" href="css/css-circular-prog-bar.css">
     <!-- fonts style -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,600&display=swap"
+      rel="stylesheet">
     <!-- font wesome stylesheet -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
@@ -31,16 +36,83 @@
       $(function(){
         $("#header").load("header.html");
       });
-    </script> 
-  
+    </script>
+
     <link rel="stylesheet" href="css/css-circular-prog-bar.css">
     <link rel="shortcut icon" type="image/jpg" href="new image/iconlogo.png" />
+    <style>
+      #imgRadio {
+        width: 150px;
+        height: 150px;
+    vertical-align: middle;
+    border-style: none;
+}
+      /* html,body{
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+        .parent{
+            height: 100vh;
+        }
+        .parent>.row{
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+        .col img{
+            height:100px;
+            width: 100%;
+            cursor: pointer;
+            transition: transform 1s;
+            object-fit: cover;
+            
+        }
+        .col {
+          -ms-flex-preferred-size: 0;
+          flex-basis: 0;
+          -ms-flex-positive: 1;
+          flex-grow: 1;
+          max-width: 15%;
+        }
+        .col label{
+            overflow: hidden;
+            position: relative;
+        }
+        .imgbgchk:checked + label>.tick_container{
+            opacity: 1;
+        }
+/*         aNIMATION */
+        .imgbgchk:checked + label>img{
+            transform: scale(1.25);
+            opacity: 0.3;
+        }
+        .tick_container {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            cursor: pointer;
+            text-align: center;
+        }
+        .tick {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            padding: 6px 12px;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+        } */
+    </style>
   </head>
   <body>
     <div class="container">
-        <div id="header"></div>
+      <div id="header"></div>
 
-     <br><br><br><br> <form>
+      <br><br><br><br> <form>
         <div class="form-group">
           <label for="companyName" class="col-form-label">Company Name*</label>
           <input
@@ -48,8 +120,7 @@
             name="companyName"
             type="text"
             required="required"
-            class="form-control"
-          />
+            class="form-control" />
         </div>
 
         <div class="form-group">
@@ -59,14 +130,11 @@
             name="tagline"
             type="text"
             class="form-control"
-            required="required"
-          />
+            required="required" />
         </div>
 
         <div class="form-group">
-          <label for="overview" class="col-form-label"
-            >Brief Company Overview*</label
-          >
+          <label for="overview" class="col-form-label">Brief Company Overview*</label>
           <textarea
             id="overview"
             name="overview"
@@ -74,25 +142,20 @@
             rows="5"
             aria-describedby="overviewHelpBlock"
             required="required"
-            class="form-control"
-          ></textarea>
-          <span id="overviewHelpBlock" class="form-text text-muted"
-            >What are your services or what you do or produce?</span
-          >
+            class="form-control"></textarea>
+          <span id="overviewHelpBlock" class="form-text text-muted">What are
+            your services or what you do or produce?</span>
         </div>
 
         <div class="form-group">
-          <label for="targetAudience" class="col-form-label"
-            >Target Audience*</label
-          >
+          <label for="targetAudience" class="col-form-label">Target Audience*</label>
           <input
             id="targetAudience"
             name="targetAudience"
             placeholder="Retail, clothing etc."
             type="text"
             class="form-control"
-            required="required"
-          />
+            required="required" />
         </div>
 
         <div class="form-group">
@@ -103,20 +166,73 @@
             rows="5"
             class="form-control"
             aria-describedby="siteThemeHelpBlock"
-            required="required"
-          ></textarea>
-          <span id="siteThemeHelpBlock" class="form-text text-muted"
-            >What sort of style do you want your site to have? (e.g
+            required="required"></textarea>
+          <span id="siteThemeHelpBlock" class="form-text text-muted">What sort
+            of style do you want your site to have? (e.g
             professional, modern and clean, old world, cutting edge, vintage,
-            sporty, futuristic etc.)</span
-          >
+            sporty, futuristic etc.)</span>
         </div>
 
         <div class="form-group">
-            <label for="exampleColorInput" class="form-label">Choose Your Color* </label>
-            <input style="width: 100%; height: 50px;" type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
-          
+          <label for="exampleColorInput" class="form-label">Choose Your Color*
+          </label>
+          <input style="width: 80px; height: 80px;" type="color"
+            class="form-control form-control-color" id="exampleColorInput"
+            value="#99ccff" title="Choose your color">
+
         </div>
+
+        <div class="form-group">
+          <label for="exampleColorInput" class="form-label">Choose Your Color*
+          </label>
+          <input style="width: 80px; height: 80px;" type="color"
+            class="form-control form-control-color" id="exampleColorInput"
+            value="#000099" title="Choose your color">
+
+        </div>
+
+        <div class="form-group">
+          <label for="exampleColorInput" class="form-label">Choose Your Color*
+          </label>
+          <input style="width: 80px; height: 80px;" type="color"
+            class="form-control form-control-color" id="exampleColorInput"
+            value="#3399ff" title="Choose your color">
+
+        </div>
+
+        <div class="form-group">
+          <label for="exampleColorInput" class="form-label">Choose Your Color*
+          </label>
+          <input style="width: 80px; height: 80px;" type="color"
+            class="form-control form-control-color" id="exampleColorInput"
+            value="#99ff99" title="Choose your color">
+
+        </div>
+
+         <label for="exampleColorInput" class="form-label">Select Logo Style*</label>
+
+        <div class="layout-box"> 
+          <div class="row"> 
+            <div class="col-md-4 col-sm-4">
+              <img id="imgRadio" src="https://dummyimage.com/600x400/000/fff" class="layout-image"> 
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              
+            </div> 
+
+            <div class="col-md-4 col-sm-4">
+                <img id="imgRadio" src="https://dummyimage.com/600x400/000/fff" class="layout-image"> 
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault"></label>
+            </div> 
+
+            <div class="col-md-4 col-sm-4">
+              <img id="imgRadio" src="https://dummyimage.com/600x400/000/fff" class="layout-image"> 
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault"></label>
+            </div> 
+
+          </div> 
+        </div><br>
 
         <div class="form-group">
           <div>
@@ -128,92 +244,95 @@
       </form>
     </div>
     <section class="info_section layout_padding-top">
-        <div class="info_logo-box">
-          <h2>
-            ITEC DESIGNS
-          </h2>
-        </div>
-        <div class="container layout_padding2">
-          <div class="row">
-            <div class="col-md-3">
+      <div class="info_logo-box">
+        <h2>
+          ITEC DESIGNS
+        </h2>
+      </div>
+      <div class="container layout_padding2">
+        <div class="row">
+          <div class="col-md-3">
+            <h5>
+              About Us
+            </h5>
+            <p>
+              Our company is a leading provider of high-quality products and
+              services in the industry. We have a team of
+              dedicated and experienced professionals who are committed to
+              delivering exceptional customer experiences.
+              Our innovative solutions have helped us to build a strong
+              reputation and a loyal customer base
+            </p>
+          </div>
+          <div class="col-md-3">
+            <h5>
+              Useful Link
+            </h5>
+            <ul>
+              <li>
+                <a href="#">
+                  Video games
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Remote control
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  3d controller
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5>
+              Contact Us
+            </h5>
+            <p>
+            </p>
+          </div>
+          <div class="col-md-3">
+
+            <div class="subscribe_container">
               <h5>
-                About Us
               </h5>
-              <p>
-                Our company is a leading provider of high-quality products and services in the industry. We have a team of
-                dedicated and experienced professionals who are committed to delivering exceptional customer experiences.
-                Our innovative solutions have helped us to build a strong reputation and a loyal customer base
-              </p>
-            </div>
-            <div class="col-md-3">
-              <h5>
-                Useful Link
-              </h5>
-              <ul>
-                <li>
-                  <a href="#">
-                    Video games
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Remote control
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    3d controller
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-3">
-              <h5>
-                Contact Us
-              </h5>
-              <p>
-              </p>
-            </div>
-            <div class="col-md-3">
-    
-              <div class="subscribe_container">
-                <h5>
-                </h5>
-                <div class="form_container">
-                  <form action="">
-                    <input type="email" placeholder="Enter your email">
-                    <button type="submit">
-                      Subscribe
-                    </button>
-                  </form>
-                </div>
+              <div class="form_container">
+                <form action>
+                  <input type="email" placeholder="Enter your email">
+                  <button type="submit">
+                    Subscribe
+                  </button>
+                </form>
               </div>
-    
             </div>
+
           </div>
         </div>
-        <div class="container">
-          <div class="social_container">
-    
-            <div class="social-box">
-              <a href="">
-                <img src="images/fb.png" alt="">
-              </a>
-    
-              <a href="">
-                <img src="images/twitter.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/linkedin.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/instagram.png" alt="">
-              </a>
-            </div>
+      </div>
+      <div class="container">
+        <div class="social_container">
+
+          <div class="social-box">
+            <a href>
+              <img src="images/fb.png" alt>
+            </a>
+
+            <a href>
+              <img src="images/twitter.png" alt>
+            </a>
+            <a href>
+              <img src="images/linkedin.png" alt>
+            </a>
+            <a href>
+              <img src="images/instagram.png" alt>
+            </a>
           </div>
-        
+        </div>
+
       </section>
-    
+
       <!-- footer section -->
       <section class="container-fluid footer_section">
         <p>
@@ -222,11 +341,14 @@
         </p>
       </section>
     </div>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
-  <script src="js/script.js"></script>
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <script
+      src='https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js'></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
   </body>
 </html>
