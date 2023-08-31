@@ -40,72 +40,69 @@
 
     <link rel="stylesheet" href="css/css-circular-prog-bar.css">
     <link rel="shortcut icon" type="image/jpg" href="new image/iconlogo.png" />
+    
     <style>
-      #imgRadio {
-        width: 150px;
-        height: 150px;
-    vertical-align: middle;
-    border-style: none;
+      .checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
 }
-      /* html,body{
-            min-height: 100vh;
-            min-width: 100vw;
-        }
-        .parent{
-            height: 100vh;
-        }
-        .parent>.row{
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-        .col img{
-            height:100px;
-            width: 100%;
-            cursor: pointer;
-            transition: transform 1s;
-            object-fit: cover;
-            
-        }
-        .col {
-          -ms-flex-preferred-size: 0;
-          flex-basis: 0;
-          -ms-flex-positive: 1;
-          flex-grow: 1;
-          max-width: 15%;
-        }
-        .col label{
-            overflow: hidden;
-            position: relative;
-        }
-        .imgbgchk:checked + label>.tick_container{
-            opacity: 1;
-        }
-/*         aNIMATION */
-        .imgbgchk:checked + label>img{
-            transform: scale(1.25);
-            opacity: 0.3;
-        }
-        .tick_container {
-            transition: .5s ease;
-            opacity: 0;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            cursor: pointer;
-            text-align: center;
-        }
-        .tick {
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            padding: 6px 12px;
-            height: 40px;
-            width: 40px;
-            border-radius: 100%;
-        } */
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+
+.checkbox .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 10px;
+  height: 18px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  transform: rotate(45deg);
+}
+
+
+.image {
+    height: 100px;
+    width: auto;
+    margin-left: -10px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
     </style>
   </head>
   <body>
@@ -209,9 +206,59 @@
 
         </div>
 
-         <label for="exampleColorInput" class="form-label">Select Logo Style*</label>
+        <label for="exampleColorInput" class="form-label">Select Logo Style*</label>
 
-        <div class="layout-box"> 
+        
+        <div id="containerCheckbox"></div>
+
+        <script>
+        // JavaScript code for creating the checkboxes and images dynamically
+        // An array of image URLs
+        var images = ["logoStyles/image1.PNG", "logoStyles/image2.PNG", "logoStyles/image3.PNG"];
+        
+        // A function to create a checkbox with an image
+        function createCheckboxWithImage(image) {
+            // Create a label element
+            var label = document.createElement("label");
+            // Add the checkbox class to the label
+            label.className = "checkbox";
+            // Create an input element
+            var input = document.createElement("input");
+            // Set the type attribute to checkbox
+            input.setAttribute("type", "checkbox");
+            // Append the input to the label
+            label.appendChild(input);
+            // Create a span element
+            var span = document.createElement("span");
+            // Add the checkmark class to the span
+            span.className = "checkmark";
+            // Append the span to the label
+            label.appendChild(span);
+            // Create an image element
+            var img = document.createElement("img");
+            // Set the src attribute to the image URL
+            img.setAttribute("src", image);
+            
+            // Add the image class to the image
+            img.className = "image";
+            // Append the image to the label
+            label.appendChild(img);
+            // Return the label element
+            return label;
+        }
+        
+        // Get the containerCheckbox element by its id
+        var containerCheckbox = document.getElementById("containerCheckbox");
+        
+        // Loop through the images array and create checkboxes with images
+        for (var i = 0; i < images.length; i++) {
+            // Create a checkbox with an image using the function
+            var checkboxWithImage = createCheckboxWithImage(images[i]);
+            // Append the checkbox with an image to the containerCheckbox
+            containerCheckbox.appendChild(checkboxWithImage);
+        }
+        </script>
+        <!-- <div class="layout-box"> 
           <div class="row"> 
             <div class="col-md-4 col-sm-4">
               <img id="imgRadio" src="https://dummyimage.com/600x400/000/fff" class="layout-image"> 
@@ -232,8 +279,7 @@
             </div> 
 
           </div> 
-        </div><br>
-
+        </div><br> -->
         <div class="form-group">
           <div>
             <button name="submit" type="submit" class="btn btn-primary">
